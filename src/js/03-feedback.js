@@ -11,7 +11,10 @@ const STORAGE = "feedback-form-state"
 
 
 form.addEventListener('submit', sendUReq)
-const storage = {}
+const storage = {
+    email: '',
+    message: '',
+}
 reload()
 form.addEventListener('input', throttle(sett, 500))
 
