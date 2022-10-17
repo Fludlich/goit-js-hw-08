@@ -48,7 +48,6 @@ function reload () {
     const user = localStorage.getItem(STORAGE)
     if (user){
         const split =  JSON.parse(user)
-        console.log(user)
 
         input.value = split.email
         textarea.value = split.message
