@@ -29,20 +29,20 @@ function sett (event){
 function sendUReq (event){
     event.preventDefault();
     console.log(input.value.length)
-    // if(input.value.length===0){
+    if(input.value.length===0){
   
-    //     storage.email = ''
+        storage.email = ''
        
-    // }
-    // if(textarea.value.length===0){
-    //     storage.message = ''
-    // }
+    }
+    if(textarea.value.length===0){
+        storage.message = ''
+    }
 
     console.log(storage)
     event.currentTarget.reset();
     localStorage.removeItem(STORAGE)
-   storage.message = ''
-   storage.email = ''
+//    storage.message = ''
+//    storage.email = ''
 }
 
 function reload () {
