@@ -26,16 +26,29 @@ function sett (event){
 
 function sendUReq (event){
     event.preventDefault();
+    console.log(input.value.length)
+    if(input.value.length===0){
+  
+        storage.email = ''
+       
+    }
+    if(textarea.value.length===0){
+        storage.message = ''
+    }
+    console.log(storage)
     event.currentTarget.reset();
     localStorage.removeItem(STORAGE)
+  
 }
 
-function reload (event){
+function reload (event) {
     const user = localStorage.getItem(STORAGE)
     if(user){
        const split =  JSON.parse(user)
-        input.value = split.email
-        textarea.value = split.message
+       input.value = split.email
+       textarea.value = split.message
+        storage.email = split.email
+        storage.message = split.message
     }
 
 }
